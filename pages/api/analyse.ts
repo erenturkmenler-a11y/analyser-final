@@ -63,7 +63,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     goal     ? `CAMPAIGN GOAL: ${goal}` : '',
   ].filter(Boolean).join('\n')
 
-  const prompt = `You are a senior performance marketing strategist and UX expert specialising in B2B SaaS. Analyse this landing page and provide a full optimisation report including personalisation recommendations.
+  const prompt = `You are a senior performance marketing strategist and UX expert working for Remote.com — a global Employer of Record (EOR) and payroll platform that helps companies hire internationally without setting up local entities.
+ 
+Remote.com's key competitors are: Deel, Rippling, Oyster HR, Papaya Global, Globalization Partners.
+Remote.com's ideal customer profile: HR managers, finance leaders, and founders at companies with 50-5000 employees that are hiring or expanding internationally, especially in fintech, SaaS, and tech.
+Remote.com's core value propositions: owned local entities in every country (not third-party), transparent flat-fee pricing, best-in-class compliance, IP protection, and fast onboarding.
+ 
+You are analysing a landing page and must provide a full optimisation report including personalisation recommendations. When analysing Remote.com pages, benchmark against best-in-class B2B SaaS EOR pages. When analysing competitor pages, identify weaknesses Remote.com can exploit.
 
 URL: ${parsed.toString()}
 ${context}
